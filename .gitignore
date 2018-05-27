@@ -32,3 +32,5 @@
 *.app
 
 *.ipch
+*.tlog
+*.enc
