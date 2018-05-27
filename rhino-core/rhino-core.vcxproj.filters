@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\maths\Quaternion.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\maths\Transform.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\maths\Color.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\Time.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\Input.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tester\tester.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tester\MoveBehavoir.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Application.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Component.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\GameObject.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Graphics.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Graphics.h">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ObjectBehavoir.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\RootObject.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Window.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\shader\Material.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\shader\ShaderProgram.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\Ibo.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\Texture.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\Vao.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\Vbo.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\data\VboLayout.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\Camera.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\Mesh.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\rendering\Renderer.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\physics2d\RigidBody2D.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\physics2d\Physics2D.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\physics2d\colliders\CircleCollider2D.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\physics2d\colliders\AABBCollider2D.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\maths\maths.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\Matrix.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\MatrixFactory.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\Quaternion.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\Transform.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\Vector.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\Color.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\utility.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\Time.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\interfaces\IPrintable.h" />
+    <ClInclude Include="src\utility\Input.h" />
+    <ClInclude Include="src\tester\MoveBehavoir.h" />
+    <ClInclude Include="src\core\Application.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Component.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\GameObject.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\ObjectBehavoir.h" />
+    <ClInclude Include="src\core\RootObject.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Window.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\shader\Material.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\shader\ShaderProgram.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\shader\UniformData.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\Ibo.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\Texture.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\Vao.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\Vbo.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\data\VboLayout.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\Camera.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\Mesh.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\modules\rendering\Renderer.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Module.h" />
+    <ClInclude Include="src\modules\rendering\rendering.h" />
+    <ClInclude Include="src\modules\physics2d\colliders\Collider2D.h" />
+    <ClInclude Include="src\modules\physics2d\RigidBody2D.h" />
+    <ClInclude Include="src\modules\physics2d\Physics2D.h" />
+    <ClInclude Include="src\modules\physics2d\colliders\CircleCollider2D.h" />
+    <ClInclude Include="src\modules\physics2d\colliders\AABBCollider2D.h" />
+    <ClInclude Include="src\modules\physics2d\colliders\colliders.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\textures\test.png">
+      <Filter>Files</Filter>
+    </Image>
+    <Image Include="res\textures\openglIcon.jpg" />
+    <Image Include="res\textures\grass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shader\test.shader">
+      <Filter>Files</Filter>
+    </None>
+    <None Include="res\shader\simpleTexture.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\shader\cube.shader" />
+  </ItemGroup>
+</Project>

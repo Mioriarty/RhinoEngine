@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\rhino-core",
+    "\\rhino-core\\src",
+    "\\rhino-core\\src\\data\\shader",
+    "\\rhino-core\\src\\engine"
+  ],
+  "SelectedNode": "\\rhino-core\\src\\engine\\Application.cpp",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,22 @@
+﻿  Application.cpp
+  Component.cpp
+  GameObject.cpp
+  ObjectBehavoir.cpp
+  RootObject.cpp
+  Physics2D.cpp
+  RigidBody2D.cpp
+c:\users\moritz\desktop\programmieren\c++\rhinoengine\rhino-core\src\modules\physics2d\rigidbody2d.cpp(20): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  Camera.cpp
+  Renderer.cpp
+  Material.cpp
+  ShaderProgram.cpp
+  MoveBehavoir.cpp
+c:\users\moritz\desktop\programmieren\c++\rhinoengine\rhino-core\src\tester\movebehavoir.cpp(14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\moritz\desktop\programmieren\c++\rhinoengine\rhino-core\src\tester\movebehavoir.cpp(15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  tester.cpp
+  Generating Code...
+C:\Users\Moritz\Desktop\Programmieren\C++\RhinoEngine\bin\Debug\Intermediates\Graphics.obj : warning LNK4042: object specified more than once; extras ignored
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Moritz\Desktop\Programmieren\C++\RhinoEngine\bin\Debug\vc120.pdb'; linking object as if no debug info
+  rhino-core.vcxproj -> C:\Users\Moritz\Desktop\Programmieren\C++\RhinoEngine\bin\Debug\rhino-core.exe
