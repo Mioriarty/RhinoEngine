@@ -134,6 +134,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\ecs\Component.cpp" />
+    <ClCompile Include="src\core\ecs\ECS.cpp" />
     <ClCompile Include="src\modules\physics2d\colliders\AABBCollider2D.cpp" />
     <ClCompile Include="src\modules\physics2d\colliders\CircleCollider2D.cpp" />
     <ClCompile Include="src\modules\physics2d\Physics2D.cpp" />
@@ -165,6 +167,9 @@
     <ClCompile Include="src\utility\Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\ecs\Component.h" />
+    <ClInclude Include="src\core\ecs\ECS.h" />
+    <ClInclude Include="src\core\ecs\System.h" />
     <ClInclude Include="src\core\Module.h" />
     <ClInclude Include="src\modules\physics2d\colliders\AABBCollider2D.h" />
     <ClInclude Include="src\modules\physics2d\colliders\CircleCollider2D.h" />

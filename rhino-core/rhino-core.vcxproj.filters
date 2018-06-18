@@ -94,6 +94,12 @@
     <ClCompile Include="src\modules\physics2d\colliders\AABBCollider2D.cpp">
       <Filter>Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\ecs\Component.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\ecs\ECS.cpp">
+      <Filter>Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\maths\maths.h">
@@ -183,6 +189,9 @@
     <ClInclude Include="src\modules\physics2d\colliders\CircleCollider2D.h" />
     <ClInclude Include="src\modules\physics2d\colliders\AABBCollider2D.h" />
     <ClInclude Include="src\modules\physics2d\colliders\colliders.h" />
+    <ClInclude Include="src\core\ecs\Component.h" />
+    <ClInclude Include="src\core\ecs\System.h" />
+    <ClInclude Include="src\core\ecs\ECS.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\textures\test.png">
