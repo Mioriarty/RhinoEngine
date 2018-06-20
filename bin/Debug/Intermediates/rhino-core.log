@@ -1,18 +1,23 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(941,5): warning MSB8027: Two or more files with the name of Component.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are src\core\ecs\Component.cpp, src\core\Component.cpp.
+  Application.cpp
   Component.cpp
-  Component.cpp
+  GameObject.cpp
+  ObjectBehavoir.cpp
+  RootObject.cpp
+  ECS.cpp
+  Physics2D.cpp
+  RigidBody2D.cpp
+c:\users\moritz\desktop\programmieren\c++\rhinogameengine\rhino-core\src\modules\physics2d\rigidbody2d.cpp(20): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  Camera.cpp
+  Renderer.cpp
+  MoveBehavoir.cpp
+c:\users\moritz\desktop\programmieren\c++\rhinogameengine\rhino-core\src\tester\movebehavoir.cpp(14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\moritz\desktop\programmieren\c++\rhinogameengine\rhino-core\src\tester\movebehavoir.cpp(15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  tester.cpp
   Generating Code...
 C:\Users\Moritz\Desktop\Programmieren\C++\RhinoGameEngine\bin\Debug\Intermediates\Component.obj : warning LNK4042: object specified more than once; extras ignored
 C:\Users\Moritz\Desktop\Programmieren\C++\RhinoGameEngine\bin\Debug\Intermediates\Graphics.obj : warning LNK4042: object specified more than once; extras ignored
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
-RigidBody2D.obj : error LNK2019: unresolved external symbol "public: class rhino::Transform & __thiscall rhino::Component::getTransform(void)" (?getTransform@Component@rhino@@QAEAAVTransform@2@XZ) referenced in function "public: virtual void __thiscall rhino::RigidBody2D::awake(void)" (?awake@RigidBody2D@rhino@@UAEXXZ)
-MoveBehavoir.obj : error LNK2001: unresolved external symbol "public: class rhino::Transform & __thiscall rhino::Component::getTransform(void)" (?getTransform@Component@rhino@@QAEAAVTransform@2@XZ)
-RigidBody2D.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall rhino::Component::toString(void)const " (?toString@Component@rhino@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-Camera.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall rhino::Component::toString(void)const " (?toString@Component@rhino@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-Renderer.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall rhino::Component::toString(void)const " (?toString@Component@rhino@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-tester.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall rhino::Component::toString(void)const " (?toString@Component@rhino@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-GameObject.obj : error LNK2019: unresolved external symbol "private: void __thiscall rhino::Component::detachFromGameObject(void)" (?detachFromGameObject@Component@rhino@@AAEXXZ) referenced in function "public: __thiscall rhino::GameObject::~GameObject(void)" (??1GameObject@rhino@@QAE@XZ)
-GameObject.obj : error LNK2019: unresolved external symbol "private: void __thiscall rhino::Component::attachToGameObject(class rhino::GameObject *,bool)" (?attachToGameObject@Component@rhino@@AAEXPAVGameObject@2@_N@Z) referenced in function "protected: __thiscall rhino::GameObject::GameObject(class rhino::GameObject const &)" (??0GameObject@rhino@@IAE@ABV01@@Z)
-tester.obj : error LNK2001: unresolved external symbol "private: void __thiscall rhino::Component::attachToGameObject(class rhino::GameObject *,bool)" (?attachToGameObject@Component@rhino@@AAEXPAVGameObject@2@_N@Z)
-C:\Users\Moritz\Desktop\Programmieren\C++\RhinoGameEngine\bin\Debug\rhino-core.exe : fatal error LNK1120: 4 unresolved externals
+ECS.obj : error LNK2001: unresolved external symbol "private: static class std::vector<class std::tuple<unsigned int (__cdecl*)(class std::vector<char,class std::allocator<char> > &,void *,struct rhino::ecs::BaseComponent *),void (__cdecl*)(struct rhino::ecs::BaseComponent *),unsigned int>,class std::allocator<class std::tuple<unsigned int (__cdecl*)(class std::vector<char,class std::allocator<char> > &,void *,struct rhino::ecs::BaseComponent *),void (__cdecl*)(struct rhino::ecs::BaseComponent *),unsigned int> > > rhino::ecs::BaseComponent::componentTypes" (?componentTypes@BaseComponent@ecs@rhino@@0V?$vector@V?$tuple@P6AIAAV?$vector@DV?$allocator@D@std@@@std@@PAXPAUBaseComponent@ecs@rhino@@@ZP6AX2@ZI@std@@V?$allocator@V?$tuple@P6AIAAV?$vector@DV?$allocator@D@std@@@std@@PAXPAUBaseComponent@ecs@rhino@@@ZP6AX2@ZI@std@@@2@@std@@A)
+C:\Users\Moritz\Desktop\Programmieren\C++\RhinoGameEngine\bin\Debug\rhino-core.exe : fatal error LNK1120: 1 unresolved externals

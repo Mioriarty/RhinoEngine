@@ -20,21 +20,21 @@ namespace rhino { namespace ecs {
 	}
 
 	// Entity methods
-	EntityHandle ECS::makeEntity(BaseComponent* entityComponents, const unsigned int* componentIds, unsigned int numConponents) {
+	EntityHandle ECS::makeEntity(BaseComponent* entityComponents, const unsigned int* componentTypeIds, unsigned int numConponents) {
 		std::pair<unsigned int, std::vector<std::pair<unsigned int, unsigned int>>>* entity = new std::pair<unsigned int, std::vector<std::pair<unsigned int, unsigned int>>>();
 		EntityHandle handle = (EntityHandle)entity;
 
 		for (unsigned int i = 0; i < numConponents; i++) {
 
-			if (!BaseComponent::isTypeValid(componentIds[i])) {
+			if (!BaseComponent::isTypeValid(componentTypeIds[i])) {
 				delete entity;
 				return nullptr;
 			}
 
-			ComponentCreateFunction createFun = BaseComponent::getTypeCreateFunction(componentIds[i]);
+			ComponentCreateFunction createFun = BaseComponent::getTypeCreateFunction(componentTypeIds[i]);
 			std::pair<unsigned int, unsigned int> pair;
-			pair.first = componentIds[i];
-			pair.second = createFun(components[componentIds[i]], handle, &entityComponents[i]);
+			pair.first = componentTypeIds[i];
+			pair.second = createFun(components[componentTypeIds[i]], handle, &entityComponents[i]); // memory index
 			entity->second.push_back(pair);
 		}
 
@@ -45,17 +45,26 @@ namespace rhino { namespace ecs {
 	}
 
 	void ECS::removeEntity(EntityHandle handle) {
-		std::vector<std::pair<unsigned int, unsigned int>> entity = handleToEntity(handle);
+		std::vector<std::pair<unsigned int, unsigned int>> entity = handleToEntity(handle); //CList
 
 		for (unsigned int i = 0; i < entity.size(); i++) {
 			removeComponentInternal(entity[i].first, entity[i].second);
 		}
 
-		unsigned int destIndex = handleToEntityIndex(handle);
-		unsigned int srcIndex = entities.size() - 1;
-		delete entities[destIndex];
-		entities[destIndex] = entities[srcIndex];
-		entities.pop_back();
+		unsigned int destIndex = handleToEntityIndex(handle); // EListIndex
+		unsigned int srcIndex = entities.size() - 1; // last EntityIndex
+		delete entities[destIndex]; // delete [EListIndex]
+		entities[destIndex] = entities[srcIndex]; // move last Entity* to deleted Entity*
+		entities.pop_back(); // delete last Entity*
+	}
+
+	void ECS::removeComponentInternal(unsigned int componentTypeId, unsigned int index) {
+		BaseComponent* comp = (BaseComponent*)&(components[componentTypeId][index]);
+		BaseComponent::getTypeFreeFunction(componentTypeId)(comp);
+
+		size_t size = BaseComponent::getTypeSize(componentTypeId);
+		memcpy(comp, &components[componentTypeId][components[componentTypeId].size() - 1 - size], size);
+		components[componentTypeId].pop_back();
 	}
 
 	void ECS::addSystem(BaseSystem* system) {

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef RHINO_COMPONENT_H
+#define RHINO_COMPONENT_H
+
 
 #include "utility\interfaces\IPrintable.h"
 #include "maths\maths.h"
@@ -39,3 +41,5 @@ namespace rhino {
 	};
 
 }
+
+#endif // !RHINO_COMPONENT_H

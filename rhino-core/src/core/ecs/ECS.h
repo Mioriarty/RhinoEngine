@@ -12,7 +12,9 @@ namespace rhino { namespace ecs {
 		private:
 			std::vector<BaseSystem*> systems;
 			std::map<unsigned int, std::vector<char>> components;
+		//  { CMList { CType     , [ Memory Array ] }
 			std::vector<std::pair<unsigned int, std::vector<std::pair<unsigned int, unsigned int>>>*> entities;
+		//  { EList    { Entity* { EListIndex,  CList     { Component{ CType id    CMemoryIndex}}} }
 
 			inline std::pair<unsigned int, std::vector<std::pair<unsigned int, unsigned int>>>* handleToRawType(EntityHandle handle) {
 				return (std::pair<unsigned int, std::vector<std::pair<unsigned int, unsigned int>>>*)handle;
@@ -23,17 +25,17 @@ namespace rhino { namespace ecs {
 			}
 
 			inline unsigned int handleToEntityIndex(EntityHandle handle) {
-				handleToRawType(handle)->first;
+				return handleToRawType(handle)->first;
 			}
 
-			void removeComponentInternal(unsigned int componentId, unsigned int index);
+			void removeComponentInternal(unsigned int componentTypeId, unsigned int index);
 
 		public:
 			ECS() = default;
 			~ECS();
 
 			// Entity methods
-			EntityHandle makeEntity(BaseComponent* components, const unsigned int* componentIds, unsigned int numConponents);
+			EntityHandle makeEntity(BaseComponent* components, const unsigned int* componentTypeIds, unsigned int numConponents);
 			void removeEntity(EntityHandle handle);
 
 			// Component methods
@@ -50,4 +52,21 @@ namespace rhino { namespace ecs {
 			void updateSystems();
 	};
 
-} }
+
+	template<typename T>
+	inline void ECS::addComponent(EntityHandle handle, T* component) {
+
+	}
+
+	template<typename T>
+	inline void ECS::removeComponent(EntityHandle handle, T* component) {
+
+	}
+
+	template<typename T>
+	inline void ECS::getComponent(EntityHandle handle) {
+
+	}
+}
+
+}
